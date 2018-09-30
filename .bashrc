@@ -23,10 +23,10 @@ if [ "$currTime" -lt 12 ]; then
     fi
 fi
 if [ "$currTime" -eq 12 ]; then
-	currMsg=1
+    currMsg=1
 fi
 if [ "$currTime" -eq 4 ]; then
-	currMsg=0
+    currMsg=0
 fi
 
 printf "${WELCOME_MSG[$currMsg]}"
@@ -41,6 +41,9 @@ alias c='clear'
 alias la='ls -a'
 alias ll='ls -l'
 alias search='ddgr'
+alias suvim='sudo mvim -v'
+alias autoEmail='~/Developer/Scripts/autoEmail.sh'
+alias rm='rm -i'
 
 # funny error msgs OwO
 INSULTS=(
@@ -62,16 +65,16 @@ INSULTS=(
 
 command_not_found_handle () {
     printf "  __________________________________________\n"
-	printf "${INSULTS[$((RANDOM % 14))]}"
-	printf "|                                            |\n"
-	printf "| （╯°□°）╯︵( .o.) Command not found        |\n"
-	printf "|                                            |\n"
-	printf " \_______ __________________________________/\n"
+    printf "${INSULTS[$((RANDOM % 14))]}"
+    printf "|                                            |\n"
+    printf "| （╯°□°）╯︵( .o.) Command not found        |\n"
+    printf "|                                            |\n"
+    printf " \_______ __________________________________/\n"
     printf "         v\n"
-	printf "        ╭─╮\n"
-	printf "        ⌾ ⌾\n"
-	printf "        │▕│\n"
-	printf "        ╰─╯\n"
-	return 127
+    printf "        ╭─╮\n"
+    printf "        ⌾ ⌾\n"
+    printf "        │▕│\n"
+    printf "        ╰─╯\n"
+    return 127
 }
 
