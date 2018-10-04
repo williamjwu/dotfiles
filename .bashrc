@@ -1,3 +1,6 @@
+# PS1 at startup
+export PS1="\h:\W \[\e[38;5;40m\]$ \[\e[39m\]"
+
 # startup welcome screen
 WELCOME_MSG=(
 "(づ￣ ³￣)づ  Good morning ~\n"
@@ -32,7 +35,7 @@ fi
 printf "${WELCOME_MSG[$currMsg]}"
 
 # alias
-alias virenv='. ~/Tools/virtualenv/bin/activate'
+alias virenv='. ~/Developer/Tools/virtualenv/bin/activate'
 alias schedule='open ~/Documents/School/HSBellSchedule.pdf'
 alias math='open ~/Documents/School/Calculus.pdf'
 alias vi='mvim -v'
@@ -42,7 +45,7 @@ alias la='ls -a'
 alias ll='ls -l'
 alias search='ddgr'
 alias suvim='sudo mvim -v'
-alias autoEmail='~/Developer/Scripts/autoEmail.sh'
+alias autoMail='~/Developer/Scripts/autoMail.sh'
 alias rm='rm -i'
 
 # funny error msgs OwO
