@@ -34,6 +34,7 @@ let g:airline_powerline_fonts=1
 set termguicolors
 set background=dark
 syntax on
+set autowrite
 set autoindent
 set noshowmode
 set number
@@ -53,7 +54,7 @@ set splitbelow
 set splitright
 map <C-d> <C-w><C-w>
 map <C-t> <C-w><C-v>
-
+set ttyfast
 " indentation settings
 set list lcs=tab:\|\ 
 
