@@ -1,5 +1,8 @@
 # PS1 at startup
+# full info setup
 export PS1="\h:\W \[\e[38;5;40m\]$ \[\e[39m\]"
+# simplistic
+#export PS1="\[\e[38;5;176m\]❯ \[\e[39m\]"
 
 # startup welcome screen
 WELCOME_MSG=(
@@ -46,7 +49,7 @@ alias ll='ls -l'
 alias search='ddgr'
 alias suvim='sudo mvim -v'
 alias autoMail='~/Developer/Scripts/autoMail.sh'
-alias rm='rm -i'
+alias rm='rm -ir'
 
 # funny error msgs OwO
 INSULTS=(
@@ -56,7 +59,7 @@ INSULTS=(
 " / Incompetence is also competence          \ \n"
 " / Y u no speak computer???                 \ \n"
 " / error code: 1D10T                        \ \n"
-" / Wut r u doing to me senpai?              \ \n"
+" / Water u doing to me senpai?              \ \n"
 " / fAke cOdIng mONkEy spOttED iN wILd       \ \n"
 " / This is not Windows Mr.fanboy            \ \n"
 " / Fake it till you make it!                \ \n"
@@ -68,7 +71,7 @@ INSULTS=(
 
 command_not_found_handle () {
     printf "  __________________________________________\n"
-    printf "${INSULTS[$((RANDOM % 14))]}"
+    printf "${INSULTS[$((RANDOM % ${#INSULTS[@]}))]}"
     printf "|                                            |\n"
     printf "| （╯°□°）╯︵( .o.) Command not found        |\n"
     printf "|                                            |\n"
