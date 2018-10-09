@@ -8,7 +8,7 @@ export PS1="\h:\W \[\e[38;5;40m\]$ \[\e[39m\]"
 WELCOME_MSG=(
 "(づ￣ ³￣)づ  Good morning ~\n"
 "(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧  Good afternoon!\n"
-"(づ｡◕‿‿◕｡)づ  Good evening!\n"
+"ヽ(o＾▽ ＾o)ノ~  Good evening!\n"
 )
 
 # default set currMsg to evening
