@@ -6,7 +6,7 @@ export PS1="\h:\W \[\e[38;5;40m\]$ \[\e[39m\]"
 
 # startup welcome screen
 WELCOME_MSG=(
-"(づ￣ ³￣)づ  Good morning ~\n"
+"(づ￣ ³￣)づ  Good morning!\n"
 "(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧  Good afternoon!\n"
 "ヽ(o＾▽ ＾o)ノ~  Good evening!\n"
 )
