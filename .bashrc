@@ -48,11 +48,15 @@ alias la='ls -a'
 alias ll='ls -l'
 alias google='googler'
 alias suvim='sudo mvim -v'
-alias am='~/Developer/Scripts/automail.sh'
+alias vml='~/Developer/Scripts/vimail.sh'
 alias ping='~/Developer/Tools/prettyping.sh --nolegend'
 alias top='htop'
+alias font-patcher='~/Developer/Tools/font-patcher'
 alias themeHop='~/Developer/Scripts/themeHop.sh'
 alias rm='rm -ir'
+alias l='nnn'
+
+# config for terminal file system
 
 # funny error msgs OwO
 INSULTS=(

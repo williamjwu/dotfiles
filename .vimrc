@@ -1,3 +1,4 @@
+let g:onedark_termcolors=256
 set guifont=Monaco\ for\ Powerline:h12
 set guioptions=
 set nocompatible              " be iMproved, required
@@ -15,6 +16,7 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'scrooloose/nerdtree'
+Plugin 'ryanoasis/vim-devicons'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
