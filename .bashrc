@@ -55,8 +55,11 @@ alias font-patcher='~/Developer/Tools/font-patcher'
 alias themeHop='~/Developer/Scripts/themeHop.sh'
 alias rm='rm -ir'
 alias l='nnn'
-
-# config for terminal file system
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
+alias sl='ls'
 
 # funny error msgs OwO
 INSULTS=(
