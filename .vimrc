@@ -1,5 +1,5 @@
 let g:onedark_termcolors=256
-set guifont=Monaco\ for\ Powerline:h12
+set guifont=Monaco\ Nerd\ Font:h12
 set guioptions=
 set nocompatible              " be iMproved, required
 filetype off                  " required
@@ -17,6 +17,8 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'scrooloose/nerdtree'
 Plugin 'ryanoasis/vim-devicons'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'terryma/vim-multiple-cursors'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -65,6 +67,18 @@ autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 map <C-n> :NERDTreeToggle<CR>
+
+" Custom multi-cursor mapping
+let g:multi_cursor_use_default_mapping=0
+
+let g:multi_cursor_start_word_key      = '<C-w>'
+let g:multi_cursor_select_all_word_key = '<A-w>'
+let g:multi_cursor_start_key           = 'g<C-w>'
+let g:multi_cursor_select_all_key      = 'g<A-w>'
+let g:multi_cursor_next_key            = '<C-w>'
+let g:multi_cursor_prev_key            = '<C-p>'
+let g:multi_cursor_skip_key            = '<C-x>'
+let g:multi_cursor_quit_key            = '<Esc>'
 
 " abbreviations
 abbr psvm public static void main(String[] args) {<CR>}
