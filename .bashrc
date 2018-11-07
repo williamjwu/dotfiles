@@ -57,6 +57,7 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 alias .....='cd ../../../..'
 alias sl='ls'
+alias pdfread='~/Developer/Scripts/pdfread.sh'
 
 # funny error msgs OwO
 INSULTS=(

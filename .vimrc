@@ -17,8 +17,9 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'scrooloose/nerdtree'
 Plugin 'ryanoasis/vim-devicons'
+Plugin 'scrooloose/nerdcommenter'
 Plugin 'airblade/vim-gitgutter'
-Plugin 'terryma/vim-multiple-cursors'
+"Plugin 'terryma/vim-multiple-cursors'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -41,7 +42,7 @@ syntax on
 set autowrite
 set autoindent
 set noshowmode
-set number
+set number relativenumber
 set t_Co=256
 set cursorline
 set shiftwidth=4
@@ -68,19 +69,10 @@ autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 map <C-n> :NERDTreeToggle<CR>
 
-" Custom multi-cursor mapping
-let g:multi_cursor_use_default_mapping=0
+" Block Comments
+filetype plugin on
 
-let g:multi_cursor_start_word_key      = '<C-w>'
-let g:multi_cursor_select_all_word_key = '<A-w>'
-let g:multi_cursor_start_key           = 'g<C-w>'
-let g:multi_cursor_select_all_key      = 'g<A-w>'
-let g:multi_cursor_next_key            = '<C-w>'
-let g:multi_cursor_prev_key            = '<C-p>'
-let g:multi_cursor_skip_key            = '<C-x>'
-let g:multi_cursor_quit_key            = '<Esc>'
-
-" abbreviations
+" Abbreviations
 abbr psvm public static void main(String[] args) {<CR>}
 abbr sout System.out.println();
 abbr fori for (int i = 0; i < 1; i++) {<CR>}
