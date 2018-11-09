@@ -52,7 +52,6 @@ inoremap jj <Esc>
 set laststatus=2
 let g:airline_section_x = '%{&filetype}'
 map <C-a> <esc>ggVG<CR>
-inoremap <C-v> <ESC>"+pa
 vnoremap <C-c> "+y
 vnoremap <C-x> "+d
 set splitbelow
@@ -76,4 +75,5 @@ filetype plugin on
 abbr psvm public static void main(String[] args) {<CR>}
 abbr sout System.out.println();
 abbr fori for (int i = 0; i < 1; i++) {<CR>}
+
 
