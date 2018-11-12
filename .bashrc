@@ -60,16 +60,16 @@ alias sl='ls'
 alias pdfread='~/Developer/Scripts/pdfread.sh'
 
 # git alias
-alias gadd='git add'
-alias gbranch='git branch'
+alias ga='git add'
+alias gb='git branch'
 alias gcm='git commit'
 alias gco='git checkout'
-alias ginit='git init'
-alias gmerge='git merge'
-alias gpush='git push'
-alias gpull='git pull'
+alias gi='git init'
+alias gm='git merge'
+alias gps='git push'
+alias gpl='git pull'
 alias gpom='git pull origin master'
-alias gstatus='git status'
+alias gs='git status'
 
 # funny error msgs OwO
 INSULTS=(
