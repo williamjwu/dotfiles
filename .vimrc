@@ -57,7 +57,6 @@ inoremap jj <Esc>
 set laststatus=2
 let g:airline_section_x = '%{&filetype}'
 map <C-a> <esc>ggVG<CR>
-inoremap <c-s> <Esc>:w<CR>
 vnoremap <C-c> "+y
 vnoremap <C-x> "+d
 set splitbelow
