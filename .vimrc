@@ -11,16 +11,22 @@ call vundle#begin()
 "call vundle#begin('~/some/path/here')
 
 " let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'scrooloose/nerdtree'
-Plugin 'ryanoasis/vim-devicons'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'airblade/vim-gitgutter'
-"Plugin 'terryma/vim-multiple-cursors'
-" All of your Plugins must be added before the following line
+	
+	Plugin 'VundleVim/Vundle.vim'
+	Plugin 'vim-airline/vim-airline'
+		let g:airline#extensions#tabline#enabled=1
+		let g:airline_powerline_fonts=1
+	Plugin 'vim-airline/vim-airline-themes'
+	Plugin 'Valloric/YouCompleteMe'
+	Plugin 'scrooloose/nerdtree'
+	Plugin 'ryanoasis/vim-devicons'
+	Plugin 'scrooloose/nerdcommenter'
+	Plugin 'tpope/vim-fugitive'
+	Plugin 'tpope/vim-surround'
+	Plugin 'RRethy/vim-illuminate'
+		let g:Illuminate_ftblacklist = ['nerdtree']
+
+	" All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
@@ -35,7 +41,6 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
-let g:airline_powerline_fonts=1
 set termguicolors
 set background=dark
 syntax on
@@ -52,6 +57,7 @@ inoremap jj <Esc>
 set laststatus=2
 let g:airline_section_x = '%{&filetype}'
 map <C-a> <esc>ggVG<CR>
+inoremap <c-s> <Esc>:w<CR>
 vnoremap <C-c> "+y
 vnoremap <C-x> "+d
 set splitbelow
