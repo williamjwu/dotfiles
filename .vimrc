@@ -64,6 +64,10 @@ set splitright
 map <C-d> <C-w><C-w>
 map <C-t> <C-w><C-v>
 set ttyfast
+let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+let &t_SR = "\<Esc>]50;CursorShape=2\x7"
+let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+
 " indentation settings
 set list lcs=tab:\|\ 
 
@@ -80,5 +84,4 @@ filetype plugin on
 abbr psvm public static void main(String[] args) {<CR>}
 abbr sout System.out.println();
 abbr fori for (int i = 0; i < 1; i++) {<CR>}
-
 
