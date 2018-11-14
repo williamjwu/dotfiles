@@ -25,6 +25,7 @@ call vundle#begin()
 	Plugin 'tpope/vim-surround'
 	Plugin 'RRethy/vim-illuminate'
 		let g:Illuminate_ftblacklist = ['nerdtree']
+	Plugin 'jiangmiao/auto-pairs'
 
 	" All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -64,9 +65,6 @@ set splitright
 map <C-d> <C-w><C-w>
 map <C-t> <C-w><C-v>
 set ttyfast
-let &t_SI = "\<Esc>]50;CursorShape=1\x7"
-let &t_SR = "\<Esc>]50;CursorShape=2\x7"
-let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 hi link illuminatedWord Visual
 
 " indentation settings
@@ -82,7 +80,7 @@ map <C-n> :NERDTreeToggle<CR>
 filetype plugin on
 
 " Abbreviations
-abbr psvm public static void main(String[] args) {<CR>}
+abbr psvm public static void main(String[] args) {
 abbr sout System.out.println();
-abbr fori for (int i = 0; i < 1; i++) {<CR>}
+abbr fori for (int i = 0; i < 1; i++) {
 
