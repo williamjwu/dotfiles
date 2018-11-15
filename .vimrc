@@ -11,7 +11,7 @@ call vundle#begin()
 "call vundle#begin('~/some/path/here')
 
 " let Vundle manage Vundle, required
-	
+
 	Plugin 'VundleVim/Vundle.vim'
 	Plugin 'vim-airline/vim-airline'
 		let g:airline#extensions#tabline#enabled=1
@@ -66,7 +66,9 @@ map <C-d> <C-w><C-w>
 map <C-t> <C-w><C-v>
 set ttyfast
 hi link illuminatedWord Visual
-
+let &t_SI.="\e[5 q"
+let &t_SR.="\e[4 q"
+let &t_EI.="\e[1 q"
 " indentation settings
 set list lcs=tab:\|\ 
 
