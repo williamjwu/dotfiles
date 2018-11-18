@@ -1,3 +1,5 @@
+" Keymaps
+
 map <C-a> <esc>ggVG<CR>
 vnoremap <C-c> "+y
 vnoremap <C-x> "+d
