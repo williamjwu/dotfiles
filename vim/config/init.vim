@@ -1,4 +1,6 @@
-" Vim Settings
+" --------------
+"  Vim General Settings
+" --------------
 
 set termguicolors
 set background=dark
