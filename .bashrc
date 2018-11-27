@@ -56,7 +56,6 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 alias .....='cd ../../../..'
 alias sl='ls'
-alias pdfread='~/Developer/Scripts/pdfread.sh'
 
 # git alias
 alias ga='git add'
