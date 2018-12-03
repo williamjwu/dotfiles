@@ -48,7 +48,6 @@ alias ll='ls -l'
 alias google='googler'
 alias tml='~/Developer/Scripts/termail.sh'
 alias ping='~/Developer/Tools/prettyping.sh --nolegend'
-alias top='htop'
 alias font-patcher='~/Developer/Tools/font-patcher'
 alias themeHop='~/Developer/Scripts/themeHop.sh'
 alias rm='rm -ir'
@@ -102,5 +101,4 @@ command_not_found_handle () {
     printf "        ╰─╯\n"
     return 127
 }
-
 
