@@ -42,6 +42,7 @@ alias virenv='. ~/Developer/Tools/virtualenv/bin/activate'
 alias schedule='open ~/Documents/School/HSBellSchedule.pdf'
 alias math='open ~/Documents/School/Calculus.pdf'
 alias c='clear'
+alias i='pipes.sh'
 alias la='ls -a'
 alias ll='ls -l'
 alias google='googler'
@@ -101,4 +102,5 @@ command_not_found_handle () {
     printf "        ╰─╯\n"
     return 127
 }
+
 
