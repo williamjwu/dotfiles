@@ -25,7 +25,7 @@ call vundle#begin()
 	Plugin 'RRethy/vim-illuminate'
 		let g:Illuminate_ftblacklist = ['nerdtree']
 	Plugin 'jiangmiao/auto-pairs'
-	"Plugin 'jszakmeister/vim-togglecursor'
+	Plugin 'terryma/vim-multiple-cursors'
 	" All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -37,3 +37,4 @@ filetype plugin indent on    " required
 " :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
 " :PluginSearch foo - searches for foo; append `!` to refresh local cache
 " :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+
