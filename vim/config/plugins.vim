@@ -12,6 +12,7 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 
 	Plugin 'VundleVim/Vundle.vim'
+		let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
 	Plugin 'vim-airline/vim-airline'
 		let g:airline#extensions#tabline#enabled=1
 		let g:airline_powerline_fonts=1
