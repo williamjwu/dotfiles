@@ -37,6 +37,7 @@ fi
 
 printf "${WELCOME_MSG[$currMsg]}"
 
+stty -ixon
 # alias
 alias virenv='. ~/Developer/Tools/virtualenv/bin/activate'
 alias schedule='open ~/Documents/School/HSBellSchedule.pdf'
