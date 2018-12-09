@@ -25,6 +25,7 @@ set splitright
 set ttyfast
 hi link illuminatedWord Visual
 let g:airline#extensions#whitespace#enabled = 0
+let g:netrw_dirhistmax = 0
 
 " indentation settings
 set list lcs=tab:\|\ 
