@@ -1,4 +1,3 @@
-export TERM=xterm-256color
 # PS1 at startup
 # full info setup
 export PS1="\h:\W \[\e[38;5;40m\]$ \[\e[39m\]"

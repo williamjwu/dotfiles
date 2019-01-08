@@ -1,10 +1,6 @@
 export PATH=$PATH:$HOME/Library/Python/2.7/bin
 export PATH="/usr/local/sbin:$PATH"
 
-if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
-  exec tmux
-fi
-
 # bashrc
 source ~/.bashrc
 
