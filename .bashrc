@@ -6,9 +6,9 @@ export PS1="\h:\W \[\e[38;5;40m\]$ \[\e[39m\]"
 
 # startup welcome screen
 WELCOME_MSG=(
-"(づ￣ ³￣)づ  Good morning!\n"
-"(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧  Good afternoon!\n"
-"ヽ(o＾▽ ＾o)ノ~  Good evening!\n"
+"(づ￣ ³￣)づ  Good morning!"
+"(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧  Good afternoon!"
+"ヽ(o＾▽ ＾o)ノ~  Good evening!"
 )
 
 # default set currMsg to evening
@@ -35,7 +35,7 @@ if [ "$currTime" -eq 4 ]; then
     currMsg=0
 fi
 
-printf "${WELCOME_MSG[$currMsg]}"
+echo "${WELCOME_MSG[$currMsg]}"
 
 stty -ixon
 # alias
@@ -67,6 +67,7 @@ alias sl='ls'
 
 # git alias
 alias ga='git add'
+alias gc='git clone'
 alias gb='git branch'
 alias gcm='git commit'
 alias gco='git checkout'
