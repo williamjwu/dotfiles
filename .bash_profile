@@ -1,5 +1,6 @@
 export PATH=$PATH:$HOME/Library/Python/2.7/bin
 export PATH="/usr/local/sbin:$PATH"
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 # bashrc
 source ~/.bashrc

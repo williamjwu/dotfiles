@@ -1,8 +1,5 @@
-# PS1 at startup
-# full info setup
 export PS1="\h:\W \[\e[38;5;40m\]$ \[\e[39m\]"
-# simplistic
-#export PS1="\[\e[38;5;176m\]❯ \[\e[39m\]"
+export CURR_IP='ipconfig getifaddr en-1'
 
 # startup welcome screen
 WELCOME_MSG=(
@@ -39,7 +36,6 @@ echo "${WELCOME_MSG[$currMsg]}"
 
 stty -ixon
 # alias
-export CURR_IP='ipconfig getifaddr en0'
 alias server="browser-sync start -s -f . --no-notify --host $CURR_IP --port 8000"
 alias virenv='. ~/Developer/Tools/virtualenv/bin/activate'
 alias schedule='open ~/Documents/School/HSBellSchedule.pdf'
@@ -113,5 +109,3 @@ command_not_found_handle () {
     printf "        ╰─╯\n"
     return 127
 }
-
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
