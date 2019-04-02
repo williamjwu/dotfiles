@@ -39,6 +39,8 @@ echo "${WELCOME_MSG[$currMsg]}"
 
 stty -ixon
 # alias
+export CURR_IP='ipconfig getifaddr en0'
+alias server="browser-sync start -s -f . --no-notify --host $CURR_IP --port 8000"
 alias virenv='. ~/Developer/Tools/virtualenv/bin/activate'
 alias schedule='open ~/Documents/School/HSBellSchedule.pdf'
 alias math='open ~/Documents/School/Calculus.pdf'
@@ -112,3 +114,4 @@ command_not_found_handle () {
     return 127
 }
 
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
