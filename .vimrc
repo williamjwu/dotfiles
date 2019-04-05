@@ -5,5 +5,4 @@ source $HOME/.vim/config/plugins.vim
 source $HOME/.vim/config/init.vim
 source $HOME/.vim/config/ginit.vim
 source $HOME/.vim/config/keymaps.vim
-source $HOME/.vim/config/abbr.vim
 
