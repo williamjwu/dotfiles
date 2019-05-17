@@ -41,6 +41,7 @@ alias server="browser-sync start -s -f . --no-notify --host $CURR_IP --port 8000
 alias virenv='. ~/Developer/Tools/virtualenv/bin/activate'
 alias schedule='open ~/Documents/School/HSBellSchedule.pdf'
 alias math='open ~/Documents/School/Calculus.pdf'
+alias tks='tmux kill-server'
 alias c='clear'
 alias i='pipes.sh'
 alias la='ls -a'
