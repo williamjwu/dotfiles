@@ -1,6 +1,10 @@
 export TERM=xterm-256color
-export PS1="\h:\W \[\e[38;5;40m\]$ \[\e[39m\]"
+export PS1="\h:\W\[\e[38;5;35m\]\$(parse_git_branch) \[\e[39m\]$ "
 export CURR_IP='ipconfig getifaddr en-1'
+
+parse_git_branch() {
+  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
 
 # startup welcome screen
 WELCOME_MSG=(
@@ -48,7 +52,7 @@ alias la='ls -a'
 alias lf='ranger'
 alias ll='ls -l'
 alias top='vtop'
-alias google='googler'
+alias search='googler'
 alias tml='~/Developer/Scripts/termail.sh'
 alias ping='~/Developer/Tools/prettyping.sh --nolegend'
 alias font-patcher='~/Developer/Tools/font-patcher'
@@ -112,4 +116,3 @@ command_not_found_handle () {
     printf "        ╰─╯\n"
     return 127
 }
-
