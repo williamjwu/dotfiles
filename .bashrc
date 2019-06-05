@@ -43,8 +43,6 @@ stty -ixon
 # alias
 alias server="browser-sync start -s -f . --no-notify --host $CURR_IP --port 8000"
 alias virenv='. ~/Developer/Tools/virtualenv/bin/activate'
-alias schedule='open ~/Documents/School/HSBellSchedule.pdf'
-alias math='open ~/Documents/School/Calculus.pdf'
 alias tks='tmux kill-server'
 alias c='clear'
 alias i='pipes.sh'
@@ -55,7 +53,6 @@ alias top='vtop'
 alias search='googler'
 alias tml='~/Developer/Scripts/termail.sh'
 alias ping='~/Developer/Tools/prettyping.sh --nolegend'
-alias font-patcher='~/Developer/Tools/font-patcher'
 alias themeHop='~/Developer/Scripts/themeHop.sh'
 alias which='type -all'
 alias sherlock='python3 ~/Developer/Tools/sherlock/sherlock.py'
