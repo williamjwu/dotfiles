@@ -41,7 +41,7 @@ echo "${WELCOME_MSG[$currMsg]}"
 
 stty -ixon
 # alias
-alias server="browser-sync start -s -f . --no-notify --host $CURR_IP --port 8000"
+alias server="browser-sync start -s -f . --no-notify --host $CURR_IP --port 8080"
 alias virenv='. ~/Developer/Tools/virtualenv/bin/activate'
 alias tks='tmux kill-server'
 alias c='clear'
@@ -83,33 +83,33 @@ alias gs='git status'
 
 # funny error msgs OwO
 INSULTS=(
-" /   Hahaha, n00b!                          \ \n"
-" /   Plz uninstall                          \ \n"
-" /   U suk …                                \ \n"
-" /   Incompetence is also competence        \ \n"
-" /   Y u no speak computer???               \ \n"
-" /   Error code: 1D10T                      \ \n"
-" /   Water u doing to me senpai?            \ \n"
-" /   FakE cOdIng mONkEy spOttED iN wILd     \ \n"
-" /   This is not Windows Mr.fanboy          \ \n"
-" /   Fake it till you make it!              \ \n"
-" /   Pro tip: type a valid command!         \ \n"
-" /   Wow! That was impressively wrong!      \ \n"
-" /   Absolutely pathetic …                  \ \n"
-" /   An easy fix will be sudo rm -rf /      \ \n"
+"|   Hahaha, n00b!                          | \n"
+"|   Plz uninstall                          | \n"
+"|   U suk …                                | \n"
+"|   Incompetence is also competence        | \n"
+"|   Y u no speak computer???               | \n"
+"|   Error code: 1D10T                      | \n"
+"|   Water u doing to me senpai?            | \n"
+"|   FakE cOdIng mONkEy spOttED iN wILd     | \n"
+"|   This is not Windows Mr.fanboy          | \n"
+"|   Fake it till you make it!              | \n"
+"|   Pro tip: type a valid command!         | \n"
+"|   Wow! That was impressively wrong!      | \n"
+"|   Absolutely pathetic …                  | \n"
+"|   An easy fix will be sudo rm -rf /      | \n"
 )
 
 command_not_found_handle () {
-    printf "  __________________________________________\n"
+    printf "*------------------------------------------*\n"
     printf "${INSULTS[$((RANDOM % ${#INSULTS[@]}))]}"
-    printf "|                                            |\n"
-    printf "|  （╯°□°）╯︵( .o.) Command not found       |\n"
-    printf "|                                            |\n"
-    printf " \_______ __________________________________/\n"
-    printf "         v\n"
-    printf "        ╭─╮\n"
-    printf "        ⌾ ⌾\n"
-    printf "        │▕│\n"
-    printf "        ╰─╯\n"
+    printf "|                                          |\n"
+    printf "|  （╯°□°）╯︵( .o.) Command not found     |\n"
+    printf "|                                          |\n"
+    printf "*------------------------------------------*\n"
+    printf "       o\n"
+    printf "        o   ╭─╮\n"
+    printf "         o  ⌾ ⌾\n"
+    printf "            │▕│\n"
+    printf "            ╰─╯\n"
     return 127
 }
