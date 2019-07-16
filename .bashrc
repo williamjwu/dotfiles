@@ -48,7 +48,6 @@ alias c='clear'
 alias i='pipes.sh'
 alias la='ls -a'
 alias lf='ranger'
-alias ll='ls -l'
 alias top='vtop'
 alias search='googler'
 alias tml='~/Developer/Scripts/termail.sh'
@@ -61,8 +60,7 @@ alias cp='cp -iv'
 alias mv='mv -iv'
 alias mkdir='mkdir -pv'
 alias ll='ls -FGlAhp'
-alias ls='ls -CF'
-alias sl='ls -CF'
+alias sl='ls'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
@@ -81,22 +79,22 @@ alias gpl='git pull'
 alias gpom='git pull origin master'
 alias gs='git status'
 
-# funny error msgs OwO
+# funny error msgs
 INSULTS=(
-"|   Hahaha, n00b!                          | \n"
+"|   Haha, n00b!                            | \n"
 "|   Plz uninstall                          | \n"
-"|   U suk …                                | \n"
 "|   Incompetence is also competence        | \n"
-"|   Y u no speak computer???               | \n"
+"|   No speak computer???                   | \n"
 "|   Error code: 1D10T                      | \n"
 "|   Water u doing to me senpai?            | \n"
 "|   FakE cOdIng mONkEy spOttED iN wILd     | \n"
-"|   This is not Windows Mr.fanboy          | \n"
+"|   Dear Regulars: this is not Windows     | \n"
 "|   Fake it till you make it!              | \n"
 "|   Pro tip: type a valid command!         | \n"
 "|   Wow! That was impressively wrong!      | \n"
 "|   Absolutely pathetic …                  | \n"
 "|   An easy fix will be sudo rm -rf /      | \n"
+"|   Absolutely nobody:       You: eRrOR    | \n"
 )
 
 command_not_found_handle () {
