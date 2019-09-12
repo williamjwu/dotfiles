@@ -94,7 +94,7 @@ INSULTS=(
 "|   Wow! That was impressively wrong!      | \n"
 "|   Absolutely pathetic …                  | \n"
 "|   An easy fix will be sudo rm -rf /      | \n"
-"|   Absolutely nobody:       You: eRrOR    | \n"
+"|   Absolutely nobody:     You: eRrOR      | \n"
 )
 
 command_not_found_handle () {
