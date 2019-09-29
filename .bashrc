@@ -10,7 +10,7 @@ parse_git_branch() {
 WELCOME_MSG=(
 "(づ￣ ³￣)づ  Good morning!"
 "(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧  Good afternoon!"
-"ヽ(o＾▽ ＾o)ノ~  Good evening!"
+"ᕙ(⇀‸↼‶)ᕗ  Good evening!"
 )
 
 # default set currMsg to evening
@@ -68,16 +68,10 @@ alias .....='cd ../../../..'
 
 # git alias
 alias ga='git add'
-alias gc='git clone'
-alias gb='git branch'
 alias gcm='git commit'
 alias gco='git checkout'
-alias gi='git init'
-alias gm='git merge'
 alias gps='git push'
 alias gpl='git pull'
-alias gpom='git pull origin master'
-alias gs='git status'
 
 # funny error msgs
 INSULTS=(
