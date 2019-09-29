@@ -10,7 +10,7 @@ parse_git_branch() {
 WELCOME_MSG=(
 "(づ￣ ³￣)づ  Good morning!"
 "(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧  Good afternoon!"
-"ᕙ(⇀‸↼‶)ᕗ  Good evening!"
+"(っ˘▾˘)っ  Good evening!"
 )
 
 # default set currMsg to evening
