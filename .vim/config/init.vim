@@ -33,3 +33,4 @@ filetype plugin indent on
 
 " Fix coc.nvim linting slow
 set updatetime=300
+
