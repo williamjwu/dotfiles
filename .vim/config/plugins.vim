@@ -23,6 +23,7 @@ function! LightlineFilename()
 endfunction
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'sheerun/vim-polyglot'
+Plug 'psliwka/vim-smoothie'
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'scrooloose/nerdcommenter'
