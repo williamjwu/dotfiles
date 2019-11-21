@@ -3,7 +3,7 @@
 "  Author: William Wu
 " ----------------------------------------
 
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/.vim/plugins')
 Plug 'itchyny/lightline.vim'
 let g:lightline = {
             \ 'colorscheme': 'onedark',
