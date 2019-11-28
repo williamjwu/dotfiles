@@ -3,6 +3,10 @@
 "  Author: William Wu
 " ----------------------
 
+let &t_SI.="\e[5 q" "SI = INSERT mode
+let &t_SR.="\e[4 q" "SR = REPLACE mode
+let &t_EI.="\e[1 q" "EI = NORMAL mode (ELSE)
+
 set termguicolors
 colorscheme onedark
 set background=dark
@@ -27,10 +31,6 @@ hi link illuminatedWord Visual
 set timeoutlen=1000 ttimeoutlen=10
 let g:netrw_dirhistmax = 0
 set backspace=indent,eol,start
-
-let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
-let &t_SR = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=2\x7\<Esc>\\"
-let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
 
 " Block Comments
 filetype plugin indent on
