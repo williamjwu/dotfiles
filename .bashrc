@@ -6,38 +6,38 @@ parse_git_branch() {
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
 
-# startup welcome screen
+# Startup welcome screen
 WELCOME_MSG=(
 "(づ￣ ³￣)づ  Good morning!"
 "(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧  Good afternoon!"
 "(っ˘▾˘)っ  Good evening!"
 )
 
-# default set currMsg to evening
+# Default set currMsg to evening
 # from 4 - 12 it is considered morning
 # from 12 - 20 it is considered afternoon
 # from 20 - next day 4 is considered evening
 
-currTime=$(date +"%H")
-currMsg=2
-if [ "$currTime" -gt 12 ]; then
-    if [ "$currTime" -lt 20 ]; then
-        currMsg=1
+curr_time=$(date +"%H")
+curr_msg=2
+if [ "$curr_time" -gt 12 ]; then
+    if [ "$curr_time" -lt 20 ]; then
+        curr_msg=1
     fi
 fi
-if [ "$currTime" -lt 12 ]; then
-    if [ "$currTime" -gt 4 ]; then
-        currMsg=0
+if [ "$curr_time" -lt 12 ]; then
+    if [ "$curr_time" -gt 4 ]; then
+        curr_msg=0
     fi
 fi
-if [ "$currTime" -eq 12 ]; then
-    currMsg=1
+if [ "$curr_time" -eq 12 ]; then
+    curr_msg=1
 fi
-if [ "$currTime" -eq 4 ]; then
-    currMsg=0
+if [ "$curr_time" -eq 4 ]; then
+    curr_msg=0
 fi
 
-echo "${WELCOME_MSG[$currMsg]}"
+echo "${WELCOME_MSG[$curr_msg]}"
 
 stty -ixon
 # alias
@@ -69,7 +69,6 @@ alias .....='cd ../../../..'
 # git alias
 alias ga='git add'
 alias gcm='git commit'
-alias gco='git checkout'
 alias gps='git push'
 alias gpl='git pull'
 
