@@ -39,7 +39,6 @@ fi
 
 echo "${WELCOME_MSG[$curr_msg]}"
 
-stty -ixon
 # alias
 alias server="browser-sync start -s -f . --no-notify --host $CURR_IP --port 8080"
 alias virenv='. ~/Developer/tools/virtualenv/bin/activate'
@@ -64,7 +63,6 @@ alias sl='ls'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
-alias .....='cd ../../../..'
 
 # git alias
 alias ga='git add'
