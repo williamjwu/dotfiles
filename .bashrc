@@ -14,26 +14,26 @@ WELCOME_MSG=(
 )
 
 # Default set currMsg to evening
-# from 4 - 12 it is considered morning
-# from 12 - 20 it is considered afternoon
-# from 20 - next day 4 is considered evening
+# from 5:00 - 12:59 is morning
+# from 13:00 - 19:59 is afternoon
+# from 20:00 - next day 4:59 is evening
 
 curr_time=$(date +"%H")
 curr_msg=2
-if [ "$curr_time" -gt 12 ]; then
+if [ "$curr_time" -gt 13 ]; then
     if [ "$curr_time" -lt 20 ]; then
         curr_msg=1
     fi
 fi
-if [ "$curr_time" -lt 12 ]; then
-    if [ "$curr_time" -gt 4 ]; then
+if [ "$curr_time" -lt 13 ]; then
+    if [ "$curr_time" -gt 5 ]; then
         curr_msg=0
     fi
 fi
-if [ "$curr_time" -eq 12 ]; then
+if [ "$curr_time" -eq 13 ]; then
     curr_msg=1
 fi
-if [ "$curr_time" -eq 4 ]; then
+if [ "$curr_time" -eq 5 ]; then
     curr_msg=0
 fi
 
