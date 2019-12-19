@@ -8,33 +8,37 @@ parse_git_branch() {
 
 # Startup welcome screen
 WELCOME_MSG=(
-"(づ￣ ³￣)づ  Good morning!"
+"(づ￣ ³￣)づ Good morning la ~"
 "(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧  Good afternoon!"
-"(っ˘▾˘)っ  Good evening!"
+"(っ˘▾˘)っ Good evening (zzz...)"
 )
 
 # Default set currMsg to evening
-# from 5:00 - 12:59 is morning
-# from 13:00 - 19:59 is afternoon
-# from 20:00 - next day 4:59 is evening
+# from 6:00 - 11:59 is morning
+# from 12:00 - 19:59 is afternoon
+# from 20:00 - next day 5:59 is evening
 
 curr_time=$(date +"%H")
 curr_msg=2
-if [ "$curr_time" -gt 13 ]; then
-    if [ "$curr_time" -lt 20 ]; then
-        curr_msg=1
-    fi
+
+if [ "$curr_time" -eq 6 ]; then
+    curr_msg=0
 fi
-if [ "$curr_time" -lt 13 ]; then
-    if [ "$curr_time" -gt 5 ]; then
+
+if [ "$curr_time" -lt 12 ]; then
+    if [ "$curr_time" -gt 6 ]; then
         curr_msg=0
     fi
 fi
-if [ "$curr_time" -eq 13 ]; then
+
+if [ "$curr_time" -eq 12 ]; then
     curr_msg=1
 fi
-if [ "$curr_time" -eq 5 ]; then
-    curr_msg=0
+
+if [ "$curr_time" -gt 12 ]; then
+    if [ "$curr_time" -lt 20 ]; then
+        curr_msg=1
+    fi
 fi
 
 echo "${WELCOME_MSG[$curr_msg]}"
