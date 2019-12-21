@@ -8,9 +8,9 @@ parse_git_branch() {
 
 # Startup welcome screen
 WELCOME_MSG=(
-"(づ￣ ³￣)づ Good morning ~"
-"(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧  Good afternoon!"
-"(っ˘▾˘)っ Good evening (zzz..)"
+"(づ￣ ³￣)づ Gud morning ~"
+"(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧  Gud afternoon ~"
+"(っ˘▾˘)っ Gud evening ~"
 )
 
 # Default set currMsg to evening
