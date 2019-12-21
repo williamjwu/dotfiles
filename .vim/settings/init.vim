@@ -29,7 +29,6 @@ set ttyfast
 set ttymouse=xterm2
 hi link illuminatedWord Visual
 set timeoutlen=1000 ttimeoutlen=10
-let g:netrw_dirhistmax = 0
 set backspace=indent,eol,start
 
 " Block Comments
@@ -37,4 +36,9 @@ filetype plugin indent on
 
 " Fix coc.nvim linting slow
 set updatetime=300
+
+" netrw settings
+let g:netrw_dirhistmax = 0
+let g:netrw_banner = 0
+let g:netrw_liststyle = 1
 
