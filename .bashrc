@@ -8,10 +8,10 @@ parse_git_branch() {
 
 # Startup welcome screen
 WELCOME_MSG=(
-"(づ￣ ³￣)づ Gud morning ~"
-"(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧  Gud afternoon ~"
-"(っ˘▾˘)っ Gud evening ~"
-"∩(︶▽︶)∩ nite nite ~"
+    "(づ￣ ³￣)づ Gud morning ~"
+    "(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧  Gud afternoon ~"
+    "(っ˘▾˘)っ Gud evening ~"
+    "∩(︶▽︶)∩ nite nite ~"
 )
 
 # Default set currMsg to evening
@@ -76,18 +76,18 @@ alias gpl='git pull'
 
 # funny error msgs
 INSULTS=(
-"|   Haha, n00b!                            | \n"
-"|   Plz uninstall                          | \n"
-"|   Incompetence is also competence        | \n"
-"|   No speak computer???                   | \n"
-"|   Error code: 1D10T                      | \n"
-"|   Dog shit coder found?!                 | \n"
-"|   FakE cOdIng mONkEy spOttED iN wILd     | \n"
-"|   Fake it till you make it!              | \n"
-"|   Pro tip: type a valid command!         | \n"
-"|   Wow! That was impressively wrong!      | \n"
-"|   An easy fix will be sudo rm -rf /      | \n"
-"|   Absolutely nobody:     You: eRrOR      | \n"
+    "|   Haha, n00b!                            | \n"
+    "|   Plz uninstall                          | \n"
+    "|   Incompetence is also competence        | \n"
+    "|   No speak computer???                   | \n"
+    "|   Error code: 1D10T                      | \n"
+    "|   Dog shit coder found?!                 | \n"
+    "|   FakE cOdIng mONkEy spOttED iN wILd     | \n"
+    "|   Fake it till you make it!              | \n"
+    "|   Pro tip: type a valid command!         | \n"
+    "|   Wow! That was impressively wrong!      | \n"
+    "|   An easy fix will be sudo rm -rf /      | \n"
+    "|   Absolutely nobody:     You: eRrOR      | \n"
 )
 
 command_not_found_handle () {
