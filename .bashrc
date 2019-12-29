@@ -11,7 +11,7 @@ WELCOME_MSG=(
     "(づ￣ ³￣)づ Gud morning ~"
     "(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧  Gud afternoon ~"
     "(っ˘▾˘)っ Gud evening ~"
-    "∩(︶▽︶)∩ nite nite ~"
+    "∩(︶▽︶)∩ Gud nite ~"
 )
 
 # Default set currMsg to evening
