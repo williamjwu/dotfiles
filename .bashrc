@@ -63,7 +63,11 @@ alias ll='ls -FGlAhp'
 alias sl='ls'
 alias ..='cd ..'
 alias ...='cd ../..'
-alias ....='cd ../../..'
+
+alias ga='git add'
+alias gc='git commit'
+alias gps='git push'
+alias gpl='git pull'
 
 # funny error msgs
 INSULTS=(
