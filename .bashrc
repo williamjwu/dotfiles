@@ -62,7 +62,6 @@ alias mkdir='mkdir -pv'
 alias ll='ls -FGlAhp'
 alias sl='ls'
 alias ..='cd ..'
-alias ...='cd ../..'
 
 alias ga='git add'
 alias gc='git commit'
