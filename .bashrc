@@ -50,14 +50,11 @@ alias tks='tmux kill-server'
 alias c='clear'
 alias i='pipes.sh'
 alias la='ls -a'
-alias lf='ranger'
 alias top='vtop'
-alias search='googler'
 alias tml='~/Developer/scripts/termail.sh'
 alias ping='~/Developer/tools/prettyping.sh --nolegend'
 alias themeHop='~/Developer/scripts/themeHop.sh'
 alias which='type -all'
-alias sherlock='python3 ~/Developer/tools/sherlock/sherlock.py'
 alias wttr='curl wttr.in'
 alias cp='cp -iv'
 alias mv='mv -iv'
@@ -67,12 +64,6 @@ alias sl='ls'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
-
-# git alias
-alias ga='git add'
-alias gcm='git commit'
-alias gps='git push'
-alias gpl='git pull'
 
 # funny error msgs
 INSULTS=(
