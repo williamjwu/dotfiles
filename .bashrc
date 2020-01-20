@@ -48,7 +48,6 @@ alias server="browser-sync start -s -f . --no-notify --host $CURR_IP --port 8080
 alias virenv='. ~/Developer/tools/virtualenv/bin/activate'
 alias tks='tmux kill-server'
 alias c='clear'
-alias i='pipes.sh'
 alias la='ls -a'
 alias top='vtop'
 alias tml='~/Developer/scripts/termail.sh'
