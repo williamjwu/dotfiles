@@ -1,6 +1,5 @@
 export TERM=xterm-256color
 export PS1="\u:\W\[\e[38;5;35m\]\$(parse_git_branch) \[\e[39m\]$ "
-export CURR_IP='ipconfig getifaddr en-1'
 
 parse_git_branch() {
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
@@ -44,7 +43,6 @@ fi
 echo "${WELCOME_MSG[$curr_msg]}"
 
 # alias
-alias server="browser-sync start -s -f . --no-notify --host $CURR_IP --port 8080"
 alias virenv='. ~/Developer/tools/virtualenv/bin/activate'
 alias tks='tmux kill-server'
 alias c='clear'
