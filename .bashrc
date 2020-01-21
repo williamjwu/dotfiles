@@ -44,7 +44,7 @@ echo "${WELCOME_MSG[$curr_msg]}"
 
 # alias
 alias virenv='. ~/Developer/tools/virtualenv/bin/activate'
-alias tks='tmux kill-server'
+alias gtkwave='open ~/Developer/tools/gtkwave.app'
 alias c='clear'
 alias la='ls -a'
 alias top='vtop'
