@@ -6,7 +6,7 @@
 call plug#begin('~/.vim/plugins')
 Plug 'itchyny/lightline.vim'
 let g:lightline = {
-            \ 'colorscheme': 'powerline',
+            \ 'colorscheme': 'one',
             \ 'active': {
             \ 'left': [ [ 'mode', 'paste' ],
             \ 			[ 'gitbranch', 'readonly', 'filename'] ],
@@ -21,7 +21,6 @@ function! LightlineFilename()
     let modified = &modified ? ' +' : ''
     return filename . modified
 endfunction
-Plug 'crusoexia/vim-monokai'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-fugitive'
