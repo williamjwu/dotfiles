@@ -8,7 +8,7 @@ let &t_SR.="\e[4 q" "SR = REPLACE mode
 let &t_EI.="\e[1 q" "EI = NORMAL mode (ELSE)
 
 set termguicolors
-colorscheme onedark
+colorscheme monokai
 set background=dark
 syntax on
 set hidden
