@@ -1,3 +1,4 @@
+export EDITOR=vim
 export TERM=xterm-256color
 export PS1="\u:\W\[\e[38;5;35m\]\$(parse_git_branch) \[\e[39m\]$ "
 
