@@ -11,8 +11,8 @@ set termguicolors
 colorscheme one
 set background=dark
 syntax on
-set hidden
 set mouse=a
+set hidden
 set autoindent
 set nocompatible
 set noshowmode
