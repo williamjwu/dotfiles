@@ -63,6 +63,7 @@ alias ..='cd ..'
 
 alias ga='git add'
 alias gc='git commit'
+alias gs='git status'
 alias gps='git push'
 alias gpl='git pull'
 
