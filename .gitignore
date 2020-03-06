@@ -1,2 +1,3 @@
 plugins/
 .tmux/
+.DS_Store
