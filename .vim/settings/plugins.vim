@@ -11,7 +11,6 @@ call plug#begin('~/.vim/plugins')
     Plug '/usr/local/opt/fzf'
     Plug 'junegunn/fzf.vim'
     Plug 'scrooloose/nerdcommenter'
-    Plug 'RRethy/vim-illuminate'
     Plug 'lilydjwg/colorizer'
     Plug 'majutsushi/tagbar'
         let g:Tlist_Ctags_Cmd='/usr/local/Cellar/ctags/5.8_1/bin/ctags'

@@ -20,7 +20,6 @@ set splitbelow
 set splitright
 set ttyfast
 set ttymouse=xterm2
-hi link illuminatedWord Visual
 set timeoutlen=1000 ttimeoutlen=10
 set backspace=indent,eol,start
 
