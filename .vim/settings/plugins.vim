@@ -4,23 +4,23 @@
 " ----------------------------------------
 
 call plug#begin('~/.vim/plugins')
-Plug 'itchyny/lightline.vim'
-let g:lightline = {
-            \ 'colorscheme': 'one',
-            \ 'active': {
-            \ 'left': [ [ 'mode', 'paste' ],
-            \ 			[ 'gitbranch', 'readonly', 'filename'] ],
-            \ },
-            \ 'component_function': {
-            \   'gitbranch': 'fugitive#head',
-            \	'filename': 'LightlineFilename'
-            \ },
-            \ }
-function! LightlineFilename()
-    let filename = expand('%:t') !=# '' ? expand('%:t') : '[No Name]'
-    let modified = &modified ? ' +' : ''
-    return filename . modified
-endfunction
+"Plug 'itchyny/lightline.vim'
+"let g:lightline = {
+"            \ 'colorscheme': 'one',
+"            \ 'active': {
+"            \ 'left': [ [ 'mode', 'paste' ],
+"            \ 			[ 'gitbranch', 'readonly', 'filename'] ],
+"            \ },
+"            \ 'component_function': {
+"            \   'gitbranch': 'fugitive#head',
+"            \	'filename': 'LightlineFilename'
+"            \ },
+"            \ }
+"function! LightlineFilename()
+"    let filename = expand('%:t') !=# '' ? expand('%:t') : '[No Name]'
+"    let modified = &modified ? ' +' : ''
+"    return filename . modified
+"endfunction
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 let g:polyglot_disabled = ['v']
 Plug 'sheerun/vim-polyglot'

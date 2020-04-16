@@ -69,7 +69,7 @@ if (has('termguicolors') && &termguicolors) || has('gui_running')
   hi PmenuSel guifg=#dfdfe0 guibg=#1266ca guisp=NONE gui=NONE cterm=NONE
   hi PmenuThumb guifg=#414453 guibg=#414453 guisp=NONE gui=NONE cterm=NONE
   hi ErrorMsg guifg=#ff8170 guibg=NONE guisp=NONE gui=NONE cterm=NONE
-  hi ModeMsg guifg=#7f8c98 guibg=NONE guisp=NONE gui=NONE cterm=NONE
+  hi ModeMsg guifg=#dfdfde guibg=NONE guisp=NONE gui=NONE cterm=NONE
   hi MoreMsg guifg=#ff7ab2 guibg=NONE guisp=NONE gui=NONE cterm=NONE
   hi Question guifg=#ff7ab2 guibg=NONE guisp=NONE gui=NONE cterm=NONE
   hi WarningMsg guifg=#ff8170 guibg=NONE guisp=NONE gui=NONE cterm=NONE
