@@ -5,7 +5,6 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 export GOPATH=$HOME/Developer/tools/go
 export PATH="$GOPATH/bin:$PATH"
-
 export GO111MODULE=on
 
 # bashrc
