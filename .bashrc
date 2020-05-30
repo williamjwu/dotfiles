@@ -44,7 +44,7 @@ fi
 echo "${WELCOME_MSG[$curr_msg]}"
 
 # alias
-alias virenv='. ~/Developer/tools/virtualenv/bin/activate'
+alias krank='. ~/Developer/tools/krank/bin/activate'
 alias c='clear'
 alias la='ls -a'
 alias tml='~/Developer/scripts/termail.sh'
