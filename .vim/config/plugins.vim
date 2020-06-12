@@ -10,7 +10,7 @@ call plug#begin('~/.vim/plugins')
     Plug 'tpope/vim-fugitive'
     Plug '/usr/local/opt/fzf'
     Plug 'junegunn/fzf.vim'
-    Plug 'scrooloose/nerdcommenter'
+    Plug 'preservim/nerdcommenter'
     Plug 'lilydjwg/colorizer'
     Plug 'majutsushi/tagbar'
         let g:Tlist_Ctags_Cmd='/usr/local/Cellar/ctags/5.8_1/bin/ctags'
