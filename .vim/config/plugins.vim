@@ -14,7 +14,6 @@ call plug#begin('~/.vim/plugins')
     Plug 'lilydjwg/colorizer'
     Plug 'majutsushi/tagbar'
         let g:Tlist_Ctags_Cmd='/usr/local/Cellar/ctags/5.8_1/bin/ctags'
-    Plug 'Yggdroot/indentLine'
     Plug 'darfink/vim-plist'
 call plug#end()
 

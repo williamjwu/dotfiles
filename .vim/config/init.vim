@@ -6,10 +6,11 @@
 syntax on
 set termguicolors
 colorscheme xcodedark
-set background=dark
+set number
+set autoindent
+set smartindent
 set mouse=a
 set number
-set t_Co=256
 set cursorline
 set shiftwidth=4
 set expandtab
@@ -24,10 +25,10 @@ set timeoutlen=1000 ttimeoutlen=10
 set backspace=indent,eol,start
 
 " Block Comments
-filetype plugin indent on
+filetype plugin on
 
 " Fix coc.nvim linting slow
-set updatetime=300
+"set updatetime=300
 
 " netrw settings
 let g:netrw_dirhistmax = 0

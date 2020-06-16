@@ -1,5 +1,5 @@
 {
-    "java.errors.incompleteClasspath.severity": "ignore",
+    "diagnostic.enable": false,
     "suggest.echodocSupport": true,
     "suggest.maxCompleteItemCount": 20,
     "coc.preferences.extensionUpdateCheck": "never"
