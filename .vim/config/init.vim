@@ -9,6 +9,7 @@ colorscheme xcodedark
 set number
 set autoindent
 set smartindent
+set hlsearch
 set mouse=a
 set number
 set cursorline

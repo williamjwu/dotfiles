@@ -1,6 +1,7 @@
 {
     "diagnostic.enable": false,
-    "suggest.echodocSupport": true,
+    "pairs.disableLanguages": [""],
+    "java.errors.incompleteClasspath.severity": "ignore",
     "suggest.maxCompleteItemCount": 20,
     "coc.preferences.extensionUpdateCheck": "never"
 }
