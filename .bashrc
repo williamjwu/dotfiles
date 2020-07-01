@@ -6,43 +6,6 @@ parse_git_branch() {
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
 
-# Startup welcome screen
-WELCOME_MSG=(
-    "∩(︶▾︶)∩ Gud morning ~"
-    "(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧  Gud afternoon ~"
-    "(っ˘▾˘)っ Gud evening ~"
-    "(づ￣ ³￣)づ Gud nite ~"
-)
-
-# Default set currMsg to evening
-# from 6:00 - 11:59 is morning
-# from 12:00 - 17:59 is afternoon
-# from 18:00 - 22:59 is evening
-# from 23:00 - next day 5:59 is night
-
-curr_time=$(date +"%H")
-curr_msg=3
-
-if [ "$curr_time" -ge 6 ]; then
-    if [ "$curr_time" -lt 12 ]; then
-        curr_msg=0
-    fi
-fi
-
-if [ "$curr_time" -ge 12 ]; then
-    if [ "$curr_time" -lt 18 ]; then
-        curr_msg=1
-    fi
-fi
-
-if [ "$curr_time" -ge 18 ]; then
-    if [ "$curr_time" -lt 23 ]; then
-        curr_msg=2
-    fi
-fi
-
-echo "${WELCOME_MSG[$curr_msg]}"
-
 # alias
 alias c='clear'
 alias la='ls -a'
