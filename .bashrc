@@ -8,10 +8,10 @@ parse_git_branch() {
 
 # Startup welcome screen
 WELCOME_MSG=(
-    "(づ￣ ³￣)づ Gud morning ~"
+    "∩(︶▾︶)∩ Gud morning ~"
     "(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧  Gud afternoon ~"
     "(っ˘▾˘)っ Gud evening ~"
-    "∩(︶▾︶)∩ Gud nite ~"
+    "(づ￣ ³￣)づ Gud nite ~"
 )
 
 # Default set currMsg to evening
@@ -44,12 +44,9 @@ fi
 echo "${WELCOME_MSG[$curr_msg]}"
 
 # alias
-alias krank='. ~/Developer/tools/krank/bin/activate'
 alias c='clear'
 alias la='ls -a'
-alias tml='~/Developer/scripts/termail.sh'
-alias ping='~/Developer/tools/prettyping.sh --nolegend'
-alias themeHop='~/Developer/scripts/themeHop.sh'
+alias ping='~/Code/tools/prettyping.sh --nolegend'
 alias which='type -all'
 alias wttr='curl wttr.in'
 alias cp='cp -iv'
