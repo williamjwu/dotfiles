@@ -1,3 +1,4 @@
+export LSCOLORS=ExGxBxDxCxEgEdxbxgxcxd
 export EDITOR=vim
 export TERM=xterm-256color
 export PS1="\u:\W\[\e[38;5;35m\]\$(parse_git_branch) \[\e[39m\]$ "
@@ -15,7 +16,8 @@ alias wttr='curl wttr.in'
 alias cp='cp -iv'
 alias mv='mv -iv'
 alias mkdir='mkdir -pv'
-alias ll='ls -FGlAhp'
+alias ll='ls -fGlAhp'
+alias ll='ls -lGaf'
 alias sl='ls'
 alias ..='cd ..'
 
