@@ -10,7 +10,6 @@ parse_git_branch() {
 # alias
 alias c='clear'
 alias la='ls -a'
-alias ping='~/Code/tools/prettyping.sh --nolegend'
 alias which='type -all'
 alias wttr='curl wttr.in'
 alias cp='cp -iv'
