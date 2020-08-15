@@ -5,7 +5,7 @@
 
 syntax on
 set termguicolors
-colorscheme xcodedark
+set background=dark
 set number
 set autoindent
 set smartindent
@@ -13,6 +13,7 @@ set hlsearch
 set mouse=a
 set number
 set cursorline
+hi CursorLine cterm=underline term=underline ctermbg=NONE guibg=NONE
 set shiftwidth=4
 set expandtab
 set tabstop=4

@@ -4,8 +4,6 @@
 " ----------------------------------------
 
 call plug#begin('~/.vim/plugins')
-    Plug 'neoclide/coc.nvim', {'branch': 'release'}
-        let g:polyglot_disabled = ['v']
     Plug 'sheerun/vim-polyglot'
     Plug 'tpope/vim-fugitive'
     Plug '/usr/local/opt/fzf'
