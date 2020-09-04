@@ -7,6 +7,9 @@ parse_git_branch() {
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
 
+# temp alias
+alias cs241='ssh jiajiew3@fa20-cs241-128.cs.illinois.edu'
+
 # alias
 alias c='clear'
 alias la='ls -a'
@@ -15,16 +18,8 @@ alias wttr='curl wttr.in'
 alias cp='cp -iv'
 alias mv='mv -iv'
 alias mkdir='mkdir -pv'
-alias ll='ls -fGlAhp'
 alias ll='ls -lGaf'
-alias sl='ls'
 alias ..='cd ..'
-
-alias ga='git add'
-alias gc='git commit'
-alias gs='git status'
-alias gps='git push'
-alias gpl='git pull'
 
 # funny error msgs
 INSULTS=(
