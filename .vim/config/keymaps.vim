@@ -3,8 +3,6 @@
 "  Author: William Wu
 " ---------
 
-vnoremap <C-c> "+y
-map <silent> <C-t> :tabedit<CR>
 nmap <silent> <C-g> :TagbarToggle<CR>
 nnoremap <C-H> <C-W><C-H>
 nnoremap <C-J> <C-W><C-J>

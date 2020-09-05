@@ -21,7 +21,6 @@ set splitbelow
 set splitright
 set ttyfast
 set ttymouse=xterm2
-set timeoutlen=1000 ttimeoutlen=10
 set backspace=indent,eol,start
 
 " netrw settings
