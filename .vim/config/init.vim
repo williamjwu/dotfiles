@@ -7,11 +7,10 @@ syntax on
 set termguicolors
 set background=dark
 set number
-set autoindent
-set smartindent
 set hlsearch
 set mouse=a
 set cursorline
+set autoindent
 set shiftwidth=4
 set expandtab
 set tabstop=4
