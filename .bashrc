@@ -7,9 +7,6 @@ parse_git_branch() {
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
 
-# temp alias
-alias cs241='ssh jiajiew3@fa20-cs241-128.cs.illinois.edu'
-
 # alias
 alias c='clear'
 alias la='ls -a'
