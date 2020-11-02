@@ -14,7 +14,6 @@ zstyle ':vcs_info:*' enable git
 # alias
 alias c='clear'
 alias la='ls -a'
-alias which='type -all'
 alias wttr='curl wttr.in'
 alias cp='cp -iv'
 alias mv='mv -iv'
