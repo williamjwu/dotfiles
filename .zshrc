@@ -1,7 +1,11 @@
 export PATH=$HOME/bin:/usr/local/bin:$PATH
-export GOPATH=$HOME/Developer/tools/go
-export PATH="$GOPATH/bin:$PATH"
-export GO111MODULE=on
+
+export GOROOT=/usr/local/go
+export PATH=$PATH:$GOROOT/bin
+
+export GOPATH=$HOME/Developer/tools/golib
+export PATH=$PATH:$GOPATH/bin
+export GOPATH=$GOPATH:$HOME/Developer/golang
 
 autoload -Uz vcs_info
 precmd_vcs_info() { vcs_info }
