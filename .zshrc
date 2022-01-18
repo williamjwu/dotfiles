@@ -3,9 +3,9 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 export GOROOT=/usr/local/go
 export PATH=$PATH:$GOROOT/bin
 
-export GOPATH=$HOME/Developer/tools/golib
+export GOPATH=$HOME/workspace/tools/golib
 export PATH=$PATH:$GOPATH/bin
-export GOPATH=$GOPATH:$HOME/Developer/golang
+export GOPATH=$GOPATH:$HOME/workspace/golang
 
 autoload -Uz vcs_info
 precmd_vcs_info() { vcs_info }
@@ -57,19 +57,4 @@ command_not_found_handler() {
     printf "            ╰─╯\n"
     return 127
 }
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/opt/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/opt/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/opt/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/opt/miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
 
