@@ -3,7 +3,8 @@
 "  Author: William Wu
 " ----------------------------------------
 
-call plug#begin('~/.vim/plugins')    
+call plug#begin('~/.vim/plugins')
+    Plug 'itchyny/lightline.vim'
     Plug 'sheerun/vim-polyglot'
         let g:python_highlight_space_errors = 0
     Plug 'tpope/vim-fugitive'

@@ -14,9 +14,9 @@ set autoindent
 set shiftwidth=4
 set expandtab
 set tabstop=4
-set laststatus=2
-set statusline=%f\ %h%w%m%r%=%-14.(%l,%c%V%)\ %P
 set splitbelow
+set laststatus=2
+set noshowmode
 set splitright
 set ttyfast
 set ttymouse=xterm2
