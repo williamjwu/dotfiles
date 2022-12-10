@@ -5,7 +5,6 @@
 
 syntax on
 set termguicolors
-set background=dark
 set number
 set hlsearch
 set mouse=a
