@@ -42,10 +42,9 @@ insults=(
 
 command_not_found_handler() {
     size=${#insults[@]}
-    idx=$(($RANDOM % $size + 1))
 
     printf "*------------------------------------------*\n"
-    printf "${insults[$idx]}"
+    printf "${insults[$(($RANDOM % $size + 1))]}"
     printf "|                                          |\n"
     printf "|  （╯°□°）╯︵( .o.) Command not found     |\n"
     printf "|                                          |\n"
@@ -58,3 +57,7 @@ command_not_found_handler() {
     return 127
 }
 
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
