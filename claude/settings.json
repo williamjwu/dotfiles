@@ -1,9 +1,9 @@
 {
   "model": "opus",
-  "theme": "dark",
-  "effortLevel": "xhigh",
   "statusLine": {
     "type": "command",
     "command": "~/.claude/statusline.sh"
-  }
+  },
+  "effortLevel": "high",
+  "theme": "dark"
 }
