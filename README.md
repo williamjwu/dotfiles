@@ -17,6 +17,7 @@ would replace is backed up to `<path>.backup.<timestamp>` first.
 
 ```
 .zshrc, .vimrc        shell config
+nvim/init.lua         Neovim config (symlinked into ~/.config/nvim/)
 install.sh            symlink bootstrap (idempotent)
 claude/               Claude Code global config (symlinked into ~/.claude/)
 ├── settings.json     model / theme / effort level / status line

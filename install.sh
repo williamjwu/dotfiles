@@ -22,6 +22,9 @@ link() { # link <source-in-repo> <target-in-home>
 link "$DOTFILES/.zshrc" "$HOME/.zshrc"
 link "$DOTFILES/.vimrc" "$HOME/.vimrc"
 
+# Neovim (init.lua lives under $XDG_CONFIG_HOME/nvim, default ~/.config/nvim)
+link "$DOTFILES/nvim/init.lua" "${XDG_CONFIG_HOME:-$HOME/.config}/nvim/init.lua"
+
 # Claude Code global config (allowlist only)
 mkdir -p "$HOME/.claude"
 link "$DOTFILES/claude/settings.json"  "$HOME/.claude/settings.json"
