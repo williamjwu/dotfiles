@@ -1,0 +1,10 @@
+.DS_Store
+
+# Claude — never track secrets or machine-local settings, even if symlinked later
+claude/settings.local.json
+claude/**/*.local.json
+claude/.credentials.json
+claude/**/credentials*
+claude/**/*.key
+claude/**/*.pem
+claude/**/*.token
