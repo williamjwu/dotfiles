@@ -19,8 +19,9 @@ would replace is backed up to `<path>.backup.<timestamp>` first.
 .zshrc, .vimrc        shell config
 install.sh            symlink bootstrap (idempotent)
 claude/               Claude Code global config (symlinked into ~/.claude/)
-├── settings.json     model / theme / effort level
+├── settings.json     model / theme / effort level / status line
 ├── CLAUDE.md         machine-wide global instructions
+├── statusline.sh     status line: model:effort · context % · usage limits
 ├── commands/         custom slash commands
 ├── agents/           custom subagents
 ├── skills/           custom skills
@@ -35,9 +36,15 @@ Claude writes a lot of **runtime state and secrets** into `~/.claude/` and
 here; everything else is left in place and never enters the repo.
 
 **Tracked** (symlinked from `claude/` into `~/.claude/`): `settings.json`,
-`CLAUDE.md`, and the `commands/`, `agents/`, `skills/`, `hooks/`, `output-styles/`
-directories. Because the directories are symlinked, anything you add later (a new
-slash command, agent, or skill) lands in this repo automatically.
+`CLAUDE.md`, `statusline.sh`, and the `commands/`, `agents/`, `skills/`, `hooks/`,
+`output-styles/` directories. Because the directories are symlinked, anything you
+add later (a new slash command, agent, or skill) lands in this repo automatically.
+
+The status line (`settings.json` → `statusLine` → `~/.claude/statusline.sh`) is
+built only from fields documented in the official Claude Code statusline reference
+(https://code.claude.com/docs/en/statusline): `model.display_name`, `effort.level`,
+`context_window.used_percentage`, and `rate_limits.{five_hour,seven_day}`. Colors
+use 256-color codes tuned to Claude's clay palette for a dark terminal.
 
 **Never tracked** (machine-local / secret / runtime — stays in `~/.claude/`):
 `~/.claude.json` (account + project state), `credentials`, `settings.local.json`,
