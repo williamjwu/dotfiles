@@ -16,7 +16,7 @@ OK="${ESC}[38;5;114m"      # #87d787 — low usage
 WARN="${ESC}[38;5;179m"    # #d7af5f — amber, filling up
 DANGER="${ESC}[38;5;167m"  # #d75f5f — muted red, nearly full
 RESET="${ESC}[0m"
-SEP="${DIM}  ·  ${RESET}"
+SEP="${DIM} · ${RESET}"
 
 # Pick a color for an integer percentage (green < 70, amber 70-89, red >= 90).
 pct_color() {
