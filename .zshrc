@@ -18,4 +18,4 @@ alias vim="nvim"
 
 
 # opencode
-export PATH=/Users/williamwu/.opencode/bin:$PATH
+export PATH=$HOME/.opencode/bin:$PATH
