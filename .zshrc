@@ -16,3 +16,6 @@ alias la="ls -a"
 alias vi="nvim"
 alias vim="nvim"
 
+
+# opencode
+export PATH=/Users/williamwu/.opencode/bin:$PATH

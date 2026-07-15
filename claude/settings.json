@@ -5,5 +5,9 @@
     "command": "~/.claude/statusline.sh"
   },
   "effortLevel": "high",
-  "theme": "dark"
+  "tui": "fullscreen",
+  "theme": "dark",
+  "permissions": {
+    "defaultMode": "auto"
+  }
 }
