@@ -34,4 +34,13 @@ for d in commands agents skills hooks output-styles; do
   link "$DOTFILES/claude/$d" "$HOME/.claude/$d"
 done
 
+# Codex global config (allowlist only)
+mkdir -p "$HOME/.codex" "$HOME/.agents"
+link "$DOTFILES/codex/config.toml" "$HOME/.codex/config.toml"
+link "$DOTFILES/codex/AGENTS.md"   "$HOME/.codex/AGENTS.md"
+for d in agents hooks; do
+  link "$DOTFILES/codex/$d" "$HOME/.codex/$d"
+done
+link "$DOTFILES/codex/skills" "$HOME/.agents/skills"
+
 echo "Done."

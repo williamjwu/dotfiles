@@ -28,6 +28,12 @@ claude/               Claude Code global config (symlinked into ~/.claude/)
 ├── skills/           custom skills
 ├── hooks/            tool-call hooks
 └── output-styles/    output styles
+codex/                Codex global config
+├── config.toml       model / reasoning / permissions / TUI status line
+├── AGENTS.md         machine-wide global instructions
+├── agents/           custom subagents (symlinked into ~/.codex/)
+├── hooks/            hook scripts (symlinked into ~/.codex/)
+└── skills/           global skills (symlinked into ~/.agents/)
 ```
 
 ## Claude config: what's tracked and why
@@ -55,3 +61,18 @@ guards against accidentally committing secrets or `*.local.json` in the future.
 
 > Tip: keep machine-specific permissions / MCP servers in `~/.claude/settings.local.json`
 > (gitignored), not in the tracked `settings.json`.
+
+## Codex config: what's tracked and why
+
+Codex also keeps runtime state, credentials, installed plugins, and machine-specific
+integrations under `~/.codex/`. This repository manages only `config.toml`,
+`AGENTS.md`, and the `agents/`, `hooks/`, and `skills/` extension directories.
+
+The tracked config uses `gpt-5.6-sol` with medium reasoning, workspace-scoped
+permissions with automatic approval review, alternate-screen TUI mode, and a
+built-in status line. Theme is intentionally left unset. Codex global skills use
+the documented `~/.agents/skills` location rather than `~/.codex/skills`.
+
+The installer backs up an existing real `~/.codex/config.toml` before linking the
+portable tracked config. Account credentials, history, sessions, logs, caches,
+plugins, MCP integrations, and other machine-local state remain unmanaged.

@@ -1,0 +1,71 @@
+# Portable Codex defaults. Keep machine-local integrations out of this file.
+model = "gpt-5.6-sol"
+
+# Closest Codex equivalent to Claude Code's automatic permission mode:
+# operate inside the workspace sandbox and auto-review eligible escalations.
+approval_policy = "on-request"
+approvals_reviewer = "auto_review"
+default_permissions = "workspace-with-private-dirs"
+notify = ["/Users/williamwu/.codex/computer-use/Codex Computer Use.app/Contents/SharedSupport/SkyComputerUseClient.app/Contents/MacOS/SkyComputerUseClient", "turn-ended"]
+
+[permissions.workspace-with-private-dirs]
+description = "Workspace access with Documents and Dropbox denied."
+extends = ":workspace"
+
+[permissions.workspace-with-private-dirs.filesystem]
+"~/Documents" = "deny"
+"~/Dropbox" = "deny"
+
+[tui]
+alternate_screen = "always"
+status_line = ["model-with-reasoning", "current-dir", "context-remaining", "five-hour-limit", "weekly-limit"]
+status_line_use_colors = true
+
+[projects."/Users/williamwu/workspace"]
+trust_level = "trusted"
+
+[marketplaces.openai-bundled]
+source_type = "local"
+source = "/Users/williamwu/.codex/.tmp/bundled-marketplaces/openai-bundled"
+
+[plugins."codex-app-tools@openai-bundled"]
+enabled = true
+
+[plugins."sites@openai-bundled"]
+enabled = true
+
+[plugins."browser@openai-bundled"]
+enabled = true
+
+[plugins."visualize@openai-bundled"]
+enabled = true
+
+[features]
+js_repl = false
+
+[mcp_servers.node_repl]
+args = []
+command = "/Applications/ChatGPT.app/Contents/Resources/cua_node/bin/node_repl"
+startup_timeout_sec = 120
+
+[mcp_servers.node_repl.env]
+NODE_REPL_NATIVE_PIPE_CONNECT_TIMEOUT_MS = "1000"
+NODE_REPL_NODE_MODULE_DIRS = "/Applications/ChatGPT.app/Contents/Resources/cua_node/lib/node_modules"
+NODE_REPL_NODE_PATH = "/Applications/ChatGPT.app/Contents/Resources/cua_node/bin/node"
+NODE_REPL_TRUSTED_CODE_PATHS = "/Users/williamwu/.codex:/Applications/ChatGPT.app/Contents/Resources/cua_node/lib/node_modules"
+CODEX_HOME = "/Users/williamwu/.codex"
+BROWSER_USE_AVAILABLE_BACKENDS = "chrome,iab"
+BROWSER_USE_TINYSKY_ENABLED = "0"
+NODE_REPL_INSTRUCTIONS_USE_CASE_BROWSER = "Control the in-app browser in conjunction with the Browser Plugin."
+NODE_REPL_INSTRUCTIONS_USE_CASE_CHROME = "Control the Chrome browser in conjunction with the Chrome Plugin. Prefer this method of controlling Chrome over alternatives (such as Computer Use) unless the user explicitly mentions an alternative."
+NODE_REPL_INSTRUCTIONS_USE_CASE_COMPUTER_USE = "Control desktop apps on macOS through Computer Use."
+BROWSER_USE_CODEX_APP_BUILD_FLAVOR = "prod"
+BROWSER_USE_CODEX_APP_VERSION = "26.820.80927"
+NODE_REPL_TRUSTED_SERVICES = '{"browser":"/Users/williamwu/.codex/plugins/cache/openai-bundled/browser/26.820.80927/scripts/browser-service.mjs","sky":"@oai/sky/service"}'
+CODEX_CLI_PATH = "/Applications/ChatGPT.app/Contents/Resources/codex"
+
+[mcp_servers.computer-use]
+command = "./Codex Computer Use.app/Contents/SharedSupport/SkyComputerUseClient.app/Contents/MacOS/SkyComputerUseClient"
+args = ["mcp"]
+cwd = "."
+enabled = false

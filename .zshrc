@@ -15,7 +15,3 @@ alias ll="ls -lGaf"
 alias la="ls -a"
 alias vi="nvim"
 alias vim="nvim"
-
-
-# opencode
-export PATH=$HOME/.opencode/bin:$PATH

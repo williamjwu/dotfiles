@@ -8,3 +8,11 @@ claude/**/credentials*
 claude/**/*.key
 claude/**/*.pem
 claude/**/*.token
+
+# Codex — never track secrets or machine-local overrides
+codex/**/*.local.toml
+codex/**/*.local.json
+codex/**/credentials*
+codex/**/*.key
+codex/**/*.pem
+codex/**/*.token
