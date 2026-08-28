@@ -25,15 +25,6 @@ link "$DOTFILES/.vimrc" "$HOME/.vimrc"
 # Neovim (init.lua lives under $XDG_CONFIG_HOME/nvim, default ~/.config/nvim)
 link "$DOTFILES/nvim/init.lua" "${XDG_CONFIG_HOME:-$HOME/.config}/nvim/init.lua"
 
-# Claude Code global config (allowlist only)
-mkdir -p "$HOME/.claude"
-link "$DOTFILES/claude/settings.json"  "$HOME/.claude/settings.json"
-link "$DOTFILES/claude/CLAUDE.md"      "$HOME/.claude/CLAUDE.md"
-link "$DOTFILES/claude/statusline.sh"  "$HOME/.claude/statusline.sh"
-for d in commands agents skills hooks output-styles; do
-  link "$DOTFILES/claude/$d" "$HOME/.claude/$d"
-done
-
 # Codex global config (allowlist only)
 mkdir -p "$HOME/.codex" "$HOME/.agents"
 link "$DOTFILES/codex/config.toml" "$HOME/.codex/config.toml"
