@@ -1,9 +1,3 @@
-# Homebrew (Apple Silicon /opt/homebrew, Intel /usr/local); skipped if absent.
-for _brew in /opt/homebrew/bin/brew /usr/local/bin/brew; do
-  [ -x "$_brew" ] && eval "$("$_brew" shellenv)" && break
-done
-unset _brew
-
 export PATH="$HOME/.local/bin:$PATH"
 
 autoload -Uz vcs_info

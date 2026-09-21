@@ -17,13 +17,15 @@ would replace is backed up to `<path>.backup.<timestamp>` first. The Claude Code
 and Codex sections each run only if the matching CLI (`claude` / `codex`) is on
 `PATH`, so the script is safe on a machine that has only one of them.
 
-`.zshrc` puts Homebrew on `PATH` (Apple Silicon or Intel prefix) when present, and
-aliases `vi`/`vim` to `nvim`.
+`.zprofile` (login-shell environment) puts Homebrew on `PATH` when present, following
+Homebrew's own macOS recommendation; `.zshrc` holds interactive config only, including
+the `vi`/`vim` -> `nvim` aliases.
 
 ## Layout
 
 ```
-.zshrc, .vimrc        shell config
+.zprofile             login-shell env (Homebrew on PATH)
+.zshrc, .vimrc        interactive shell / vim config
 nvim/init.lua         Neovim config (symlinked into ~/.config/nvim/)
 install.sh            shell / Neovim / Claude Code / Codex symlink bootstrap (idempotent)
 claude/               Claude Code global config (symlinked into ~/.claude/)
