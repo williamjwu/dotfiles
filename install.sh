@@ -19,8 +19,7 @@ link() { # link <source-in-repo> <target-in-home>
 }
 
 # Shell
-link "$DOTFILES/.zprofile" "$HOME/.zprofile"
-link "$DOTFILES/.zshrc"    "$HOME/.zshrc"
+link "$DOTFILES/.zshrc" "$HOME/.zshrc"
 link "$DOTFILES/.vimrc" "$HOME/.vimrc"
 
 # Neovim (init.lua lives under $XDG_CONFIG_HOME/nvim, default ~/.config/nvim)
