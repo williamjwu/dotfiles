@@ -36,7 +36,7 @@ claude/               Claude Code global config (symlinked into ~/.claude/)
 ├── output-styles/    output styles
 └── skills/           NOT symlinked: ~/.claude/skills holds machine-local synced state
 codex/                Codex global config
-├── config.toml       model / reasoning / permissions / TUI status line
+├── config.toml       permissions / TUI status line (model and effort set per session)
 ├── AGENTS.md         machine-wide global instructions
 ├── agents/           custom subagents (symlinked into ~/.codex/)
 ├── hooks/            hook scripts (symlinked into ~/.codex/)
@@ -49,7 +49,7 @@ Codex also keeps runtime state, credentials, installed plugins, and machine-spec
 integrations under `~/.codex/`. This repository manages only `config.toml`,
 `AGENTS.md`, and the `agents/`, `hooks/`, and `skills/` extension directories.
 
-The tracked config uses `gpt-5.6-sol` with its default medium reasoning,
+The tracked config leaves model and reasoning effort to each session. It uses
 workspace-scoped permissions with automatic approval review, and a custom profile
 that denies access to `~/Documents` and `~/Dropbox`. Its alternate-screen TUI status
 line shows the model, directory, remaining context, and five-hour/seven-day usage
