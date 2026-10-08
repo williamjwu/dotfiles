@@ -7,5 +7,6 @@
     "command": "~/.claude/statusline.sh"
   },
   "tui": "fullscreen",
-  "theme": "dark"
+  "theme": "dark",
+  "autoUpdatesChannel": "stable"
 }
