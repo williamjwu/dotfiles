@@ -35,6 +35,8 @@ claude/               Claude Code global config (symlinked into ~/.claude/)
 ├── hooks/            hook scripts
 ├── output-styles/    output styles
 └── skills/           NOT symlinked: ~/.claude/skills holds machine-local synced state
+vscode/settings.json  VS Code user settings, a plain copy (not symlinked; copy by hand
+                      from ~/Library/Application Support/Code/User/settings.json)
 codex/                Codex global config
 ├── config.toml       permissions / TUI status line (model and effort set per session)
 ├── AGENTS.md         machine-wide global instructions

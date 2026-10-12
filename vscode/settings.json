@@ -1,0 +1,25 @@
+{
+    "editor.fontSize": 16,
+    "files.autoSave": "afterDelay",
+    "editor.fontFamily": "'JetBrainsMonoNL Nerd Font', Menlo, Monaco, 'Courier New', monospace",
+    "workbench.startupEditor": "none",
+    "terminal.integrated.fontSize": 15,
+    "claudeCode.preferredLocation": "panel",
+    "claudeCode.hideOnboarding": true,
+    "vim.statusBarColorControl": true,
+    "vim.statusBarColors.normal": ["#191A1B", "#BFBFBF"],
+    "vim.statusBarColors.insert": ["#3994BC", "#FFFFFF"],
+    "vim.statusBarColors.visual": ["#7D39BC", "#FFFFFF"],
+    "vim.statusBarColors.visualline": ["#7D39BC", "#FFFFFF"],
+    "vim.statusBarColors.visualblock": ["#7D39BC", "#FFFFFF"],
+    "vim.statusBarColors.replace": ["#BC4E39", "#FFFFFF"],
+    "workbench.colorCustomizations": {
+        "statusBar.background": "#191A1B",
+        "statusBar.noFolderBackground": "#191A1B",
+        "statusBar.debuggingBackground": "#191A1B",
+        "statusBar.foreground": "#BFBFBF",
+        "statusBar.debuggingForeground": "#BFBFBF"
+    },
+    "update.showReleaseNotes": false,
+    "extensions.ignoreRecommendations": true
+}
