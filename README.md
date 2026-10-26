@@ -34,6 +34,7 @@ claude/               Claude Code global config (symlinked into ~/.claude/)
 ├── commands/         slash commands
 ├── hooks/            hook scripts
 ├── output-styles/    output styles
+├── rules/            topic-specific global instructions, one topic per file
 └── skills/           NOT symlinked: ~/.claude/skills holds machine-local synced state
 vscode/settings.json  VS Code user settings
 codex/                Codex global config

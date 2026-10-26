@@ -33,7 +33,7 @@ if command -v claude >/dev/null 2>&1; then
   link "$DOTFILES/claude/statusline.sh" "$HOME/.claude/statusline.sh"
   # skills/ is deliberately not linked: ~/.claude/skills holds Claude-managed
   # synced state (skills/synced/), which must stay machine-local.
-  for d in agents commands hooks output-styles; do
+  for d in agents commands hooks output-styles rules; do
     link "$DOTFILES/claude/$d" "$HOME/.claude/$d"
   done
 else
