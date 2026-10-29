@@ -15,5 +15,4 @@ extends = ":workspace"
 
 [tui]
 alternate_screen = "always"
-status_line = ["model-with-reasoning", "current-dir", "context-remaining", "five-hour-limit", "weekly-limit"]
 status_line_use_colors = true
