@@ -1,20 +1,8 @@
-# Shared Codex config: install.sh symlinks this file into ~/.codex/.
+# Portable template: install.sh expands ~/ into the local home directory.
 # Closest Codex equivalent to Claude Code's automatic permission mode:
 # operate inside the workspace sandbox and auto-review eligible escalations.
 approval_policy = "on-request"
 approvals_reviewer = "auto_review"
-default_permissions = "workspace-with-private-dirs"
-
-[permissions.workspace-with-private-dirs]
-description = "Workspace access with Documents and Dropbox denied."
-extends = ":workspace"
-
-[permissions.workspace-with-private-dirs.filesystem]
-"~/Documents" = "deny"
-"~/Dropbox" = "deny"
-
-[permissions.workspace-with-private-dirs.network]
-enabled = true
 
 [tui]
 alternate_screen = "always"

@@ -36,8 +36,8 @@ add `brew shellenv` to `~/.zprofile`. `.zshrc` aliases `vi`/`vim` to `nvim`.
 .zshrc, .vimrc        shell config
 nvim/init.lua         Neovim config (symlinked into ~/.config/nvim/)
 install.sh            shell / Neovim / Claude Code / Codex symlink bootstrap (idempotent)
-claude/               Claude Code global config (symlinked into ~/.claude/)
-├── settings.json     permissions / model / effort / status line / iTerm2 hooks
+claude/               Claude Code global config
+├── settings.json     portable settings template; installed as a local copy
 ├── CLAUDE.md         machine-wide global instructions
 ├── statusline.sh     status line script referenced by settings.json
 ├── agents/           custom subagents
@@ -48,13 +48,22 @@ claude/               Claude Code global config (symlinked into ~/.claude/)
 └── skills/           NOT symlinked: ~/.claude/skills holds machine-local synced state
 vscode/settings.json  VS Code user settings
 codex/                Codex global config
-├── config.toml       shared config (symlinked into ~/.codex/)
+├── config.toml       portable config template; installed as a local copy
 ├── AGENTS.md         machine-wide global instructions and topic-file reading instructions
 ├── agents/           custom subagents (symlinked into ~/.codex/)
 ├── hooks/            hook scripts (symlinked into ~/.codex/)
 ├── rules/            topic guidance read explicitly via AGENTS.md (symlinked into ~/.codex/)
 └── skills/           global skills (symlinked into ~/.agents/)
 ```
+
+## Claude Code settings
+
+The installer copies `claude/settings.json` to `~/.claude/settings.json`, so
+Claude Code can change user settings without modifying the tracked template.
+Re-running the installer backs up an existing local settings file and replaces it
+with the template. Restore any machine-specific settings from the backup as needed.
+The remaining listed Claude config files and directories are symlinked, except
+`skills/`, which remains machine-local.
 
 ## Codex config: what's tracked and why
 
@@ -63,21 +72,20 @@ integrations under `~/.codex/`. This repository manages only `config.toml`,
 `AGENTS.md`, and the `agents/`, `hooks/`, `rules/`, and `skills/` directories.
 
 Model and reasoning effort are left to each session. The tracked config uses
-workspace-scoped permissions with automatic approval review, and a custom profile
-that denies access to `~/Documents` and `~/Dropbox`. Its alternate-screen TUI status
-line shows the model, directory, remaining context, and five-hour/seven-day usage
-limits. Theme is intentionally left unset. Codex global skills use the documented
+workspace-scoped permissions with automatic approval review. Its alternate-screen
+TUI status line shows the model, directory, remaining context, and
+five-hour/seven-day usage limits. Theme is intentionally left unset. Codex global skills use the documented
 `~/.agents/skills` location rather than `~/.codex/skills`.
 
-The installer backs up an existing real `~/.codex/config.toml`, then symlinks it
-to `codex/config.toml`, using the same backup-and-link behavior as Claude Code.
-Edits through `~/.codex/config.toml`, including app-managed changes, modify the
-tracked file. Review changes before committing so machine-specific plugin and
-MCP settings or credentials do not enter Git. When migrating from a local copy,
-its previous contents remain in the timestamped backup; restore any needed local
-integrations from that backup. Credentials, history, sessions, logs, and caches
-remain unmanaged. The permission profile enables network access while preserving
-the `~/Documents` and `~/Dropbox` restrictions.
+The installer backs up an existing real `~/.codex/config.toml`, then generates a
+local copy from the tracked template, expanding `~/` to the current home directory.
+The config is not symlinked: app updates stay local instead of writing user paths
+and runtime state into Git. Re-running the Codex installer replaces the local copy
+with the template; its previous contents remain in the timestamped backup.
+Machine-specific permission profiles and app-managed plugin and MCP settings are
+excluded from the template; restore any needed local settings from that backup
+after reinstalling. Credentials,
+history, sessions, logs, and caches remain unmanaged.
 
 Codex discovers global instructions through `~/.codex/AGENTS.md`; arbitrary
 Markdown files in `rules/` are not automatically loaded. The global file tells
