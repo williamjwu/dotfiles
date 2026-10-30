@@ -48,7 +48,7 @@ claude/               Claude Code global config (symlinked into ~/.claude/)
 └── skills/           NOT symlinked: ~/.claude/skills holds machine-local synced state
 vscode/settings.json  VS Code user settings
 codex/                Codex global config
-├── config.toml       portable config template; installed as a local copy
+├── config.toml       shared config (symlinked into ~/.codex/)
 ├── AGENTS.md         machine-wide global instructions and topic-file reading instructions
 ├── agents/           custom subagents (symlinked into ~/.codex/)
 ├── hooks/            hook scripts (symlinked into ~/.codex/)
@@ -69,14 +69,15 @@ line shows the model, directory, remaining context, and five-hour/seven-day usag
 limits. Theme is intentionally left unset. Codex global skills use the documented
 `~/.agents/skills` location rather than `~/.codex/skills`.
 
-The installer backs up an existing real `~/.codex/config.toml`, then generates a
-local copy from the tracked template, expanding `~/` to the current home directory.
-The config is not symlinked: app updates stay local instead of writing user paths
-and runtime state into Git. Re-running the Codex installer replaces the local copy
-with the template; its previous contents remain in the timestamped backup.
-App-managed plugin and MCP settings are excluded from the template; restore any
-needed local integrations from that backup after reinstalling. Credentials,
-history, sessions, logs, and caches remain unmanaged.
+The installer backs up an existing real `~/.codex/config.toml`, then symlinks it
+to `codex/config.toml`, using the same backup-and-link behavior as Claude Code.
+Edits through `~/.codex/config.toml`, including app-managed changes, modify the
+tracked file. Review changes before committing so machine-specific plugin and
+MCP settings or credentials do not enter Git. When migrating from a local copy,
+its previous contents remain in the timestamped backup; restore any needed local
+integrations from that backup. Credentials, history, sessions, logs, and caches
+remain unmanaged. The permission profile enables network access while preserving
+the `~/Documents` and `~/Dropbox` restrictions.
 
 Codex discovers global instructions through `~/.codex/AGENTS.md`; arbitrary
 Markdown files in `rules/` are not automatically loaded. The global file tells

@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Dotfiles bootstrap: links instructions and installs a local Codex config.
+# Dotfiles bootstrap: symlinks shell, editor, and agent configuration.
 # Safe to re-run. Existing real files/dirs are backed up to <path>.backup.<ts>.
 set -euo pipefail
 
@@ -50,21 +50,6 @@ link() { # link <source-in-repo> <target-in-home>
   echo "linked $dst -> $src"
 }
 
-# Render a local copy so app-managed changes never modify the tracked template.
-install_codex_config() {
-  local dst="$HOME/.codex/config.toml" line
-  if [ -L "$dst" ]; then
-    rm "$dst"
-  elif [ -e "$dst" ]; then
-    mv "$dst" "$dst.backup.$(date +%s)"
-    echo "backed up existing $dst"
-  fi
-  while IFS= read -r line || [ -n "$line" ]; do
-    printf '%s\n' "${line//\~\//$HOME/}"
-  done < "$DOTFILES/codex/config.toml" > "$dst"
-  echo "generated $dst from Codex config template"
-}
-
 if "$install_shell"; then
   # Shell
   link "$DOTFILES/.zshrc" "$HOME/.zshrc"
@@ -95,7 +80,7 @@ fi
 if "$install_codex"; then
   if command -v codex >/dev/null 2>&1; then
     mkdir -p "$HOME/.codex" "$HOME/.agents"
-    install_codex_config
+    link "$DOTFILES/codex/config.toml" "$HOME/.codex/config.toml"
     link "$DOTFILES/codex/AGENTS.md"   "$HOME/.codex/AGENTS.md"
     for d in agents hooks rules; do
       link "$DOTFILES/codex/$d" "$HOME/.codex/$d"
